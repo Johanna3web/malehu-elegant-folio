@@ -1,45 +1,147 @@
-import { Mail, Linkedin, Phone } from "lucide-react";
+import { useState } from "react";
+import { Mail, Linkedin, Download } from "lucide-react";
 import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+import { Label } from "./ui/label";
+import { useToast } from "@/hooks/use-toast";
+import ImageUpload from "./ImageUpload";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [resumeUrl, setResumeUrl] = useState<string>("");
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    setTimeout(() => {
+      toast({
+        title: "Message sent!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+      setFormData({ name: "", email: "", message: "" });
+      setIsSubmitting(false);
+    }, 1000);
+  };
+
   return (
-    <section id="contact" className="py-24">
+    <section id="contact" className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-8 animate-fade-in">
-            Get In Touch
-          </h2>
-          <p className="text-lg text-foreground/70 mb-12 animate-fade-in-up">
-            I'm always open to discussing new opportunities, collaborations, or simply connecting 
-            with fellow professionals. Feel free to reach out!
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center animate-fade-in-up">
-            <Button 
-              size="lg"
-              className="bg-primary hover:bg-hover transition-smooth shadow-soft"
-              onClick={() => window.location.href = "mailto:contact@example.com"}
-            >
-              <Mail className="mr-2" size={20} />
-              Email Me
-            </Button>
-            <Button 
-              size="lg"
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-smooth"
-              onClick={() => window.open("https://linkedin.com", "_blank")}
-            >
-              <Linkedin className="mr-2" size={20} />
-              LinkedIn
-            </Button>
-            <Button 
-              size="lg"
-              variant="outline"
-              className="border-accent text-accent hover:bg-accent hover:text-primary-foreground transition-smooth"
-              onClick={() => window.location.href = "tel:+1234567890"}
-            >
-              <Phone className="mr-2" size={20} />
-              Call
-            </Button>
+        <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-12 text-center animate-fade-in">
+          Get In Touch
+        </h2>
+        
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+          {/* Contact Form */}
+          <div className="animate-fade-in-up">
+            <h3 className="text-2xl font-heading font-semibold text-primary mb-6">
+              Send Me a Message
+            </h3>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <Label htmlFor="name">Name</Label>
+                <Input
+                  id="name"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  required
+                  className="mt-2"
+                />
+              </div>
+              <div>
+                <Label htmlFor="email">Email</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  required
+                  className="mt-2"
+                />
+              </div>
+              <div>
+                <Label htmlFor="message">Message</Label>
+                <Textarea
+                  id="message"
+                  rows={5}
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  required
+                  className="mt-2"
+                />
+              </div>
+              <Button 
+                type="submit" 
+                size="lg" 
+                className="w-full bg-primary hover:bg-hover transition-smooth"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
+              </Button>
+            </form>
+          </div>
+
+          {/* Contact Info & Resume */}
+          <div className="space-y-8 animate-fade-in-up">
+            <div>
+              <h3 className="text-2xl font-heading font-semibold text-primary mb-6">
+                Connect With Me
+              </h3>
+              <div className="space-y-4">
+                <Button 
+                  size="lg"
+                  className="w-full bg-primary hover:bg-hover transition-smooth shadow-soft justify-start"
+                  onClick={() => window.location.href = "mailto:contact@example.com"}
+                >
+                  <Mail className="mr-3" size={20} />
+                  contact@example.com
+                </Button>
+                <Button 
+                  size="lg"
+                  variant="outline"
+                  className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-smooth justify-start"
+                  onClick={() => window.open("https://linkedin.com/in/yourprofile", "_blank")}
+                >
+                  <Linkedin className="mr-3" size={20} />
+                  LinkedIn Profile
+                </Button>
+              </div>
+            </div>
+
+            {/* Resume Download */}
+            <div>
+              <h3 className="text-2xl font-heading font-semibold text-primary mb-6">
+                Download Résumé
+              </h3>
+              {resumeUrl ? (
+                <Button 
+                  size="lg"
+                  className="w-full bg-accent hover:bg-hover transition-smooth shadow-soft"
+                  onClick={() => window.open(resumeUrl, "_blank")}
+                >
+                  <Download className="mr-3" size={20} />
+                  Download My Résumé
+                </Button>
+              ) : (
+                <div>
+                  <ImageUpload
+                    bucket="resumes"
+                    onUploadComplete={setResumeUrl}
+                    accept="application/pdf"
+                    maxSize={10}
+                    label="Upload Résumé (PDF)"
+                  />
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

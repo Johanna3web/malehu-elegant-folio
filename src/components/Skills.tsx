@@ -1,26 +1,36 @@
 import { Card } from "./ui/card";
-import { Monitor, Zap, Users, TrendingUp } from "lucide-react";
+import { Briefcase, Zap, Users, Target, TrendingUp, Brain } from "lucide-react";
 
 const skillsData = [
   {
-    icon: Monitor,
-    title: "Digital Proficiency",
-    skills: ["Microsoft Office Suite", "Google Workspace", "Project Management Tools"]
+    icon: Briefcase,
+    title: "Business Management",
+    skills: ["Strategic Planning", "Project Management", "Business Analysis"]
   },
   {
     icon: Zap,
-    title: "Technical Skills",
-    skills: ["Data Analysis", "Digital Marketing", "Content Creation"]
+    title: "Digital Transformation",
+    skills: ["Process Optimization", "Digital Strategy", "Change Management"]
+  },
+  {
+    icon: Brain,
+    title: "Artificial Intelligence & Machine Learning",
+    skills: ["AI Fundamentals", "Machine Learning Concepts", "Data Analytics"]
   },
   {
     icon: Users,
-    title: "Soft Skills",
-    skills: ["Communication", "Leadership", "Team Collaboration"]
+    title: "Communication & Team Collaboration",
+    skills: ["Cross-functional Collaboration", "Stakeholder Engagement", "Presentation Skills"]
+  },
+  {
+    icon: Target,
+    title: "Problem Solving",
+    skills: ["Critical Thinking", "Analytical Skills", "Solution Design"]
   },
   {
     icon: TrendingUp,
-    title: "Professional Skills",
-    skills: ["Strategic Planning", "Problem Solving", "Time Management"]
+    title: "Adaptability & Continuous Learning",
+    skills: ["Growth Mindset", "Technology Adoption", "Self-directed Learning"]
   }
 ];
 
@@ -29,9 +39,9 @@ const Skills = () => {
     <section id="skills" className="py-24">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-12 text-center animate-fade-in">
-          Digital Skills
+          Skills
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {skillsData.map((category, index) => {
             const Icon = category.icon;
             return (
