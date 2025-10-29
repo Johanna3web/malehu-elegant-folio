@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Linkedin, Download } from "lucide-react";
+import { Mail, Linkedin, Github, Download } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -99,19 +99,28 @@ const Contact = () => {
                 <Button 
                   size="lg"
                   className="w-full bg-primary hover:bg-hover transition-smooth shadow-soft justify-start"
-                  onClick={() => window.location.href = "mailto:contact@example.com"}
+                  onClick={() => window.location.href = "mailto:johannasegoapa@gmail.com"}
                 >
                   <Mail className="mr-3" size={20} />
-                  contact@example.com
+                  johannasegoapa@gmail.com
                 </Button>
                 <Button 
                   size="lg"
                   variant="outline"
                   className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-smooth justify-start"
-                  onClick={() => window.open("https://linkedin.com/in/yourprofile", "_blank")}
+                  onClick={() => alert("Add your LinkedIn profile link")}
                 >
                   <Linkedin className="mr-3" size={20} />
-                  LinkedIn Profile
+                  Add LinkedIn Profile
+                </Button>
+                <Button 
+                  size="lg"
+                  variant="outline"
+                  className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-smooth justify-start"
+                  onClick={() => alert("Add your GitHub profile link")}
+                >
+                  <Github className="mr-3" size={20} />
+                  Add GitHub Profile
                 </Button>
               </div>
             </div>

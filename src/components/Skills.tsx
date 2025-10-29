@@ -1,36 +1,36 @@
 import { Card } from "./ui/card";
-import { Briefcase, Zap, Users, Target, TrendingUp, Brain } from "lucide-react";
+import { Code, Palette, Database, Users, Target, Brain } from "lucide-react";
 
 const skillsData = [
   {
-    icon: Briefcase,
-    title: "Business Management",
-    skills: ["Strategic Planning", "Project Management", "Business Analysis"]
+    icon: Code,
+    title: "Frontend Development",
+    skills: ["HTML5", "CSS3", "JavaScript (ES6+)", "React", "Responsive Design"]
   },
   {
-    icon: Zap,
-    title: "Digital Transformation",
-    skills: ["Process Optimization", "Digital Strategy", "Change Management"]
+    icon: Database,
+    title: "Backend Development",
+    skills: ["Node.js", "RESTful APIs", "Database Management", "Server-side Logic"]
+  },
+  {
+    icon: Palette,
+    title: "UI/UX Design",
+    skills: ["User Interface Design", "User Experience", "Prototyping", "Design Principles"]
   },
   {
     icon: Brain,
-    title: "Artificial Intelligence & Machine Learning",
-    skills: ["AI Fundamentals", "Machine Learning Concepts", "Data Analytics"]
+    title: "Problem Solving",
+    skills: ["Critical Thinking", "Analytical Skills", "Debugging", "Solution Design"]
   },
   {
     icon: Users,
-    title: "Communication & Team Collaboration",
-    skills: ["Cross-functional Collaboration", "Stakeholder Engagement", "Presentation Skills"]
+    title: "Teamwork & Collaboration",
+    skills: ["Team Communication", "Agile Methodologies", "Peer Programming", "Project Collaboration"]
   },
   {
     icon: Target,
-    title: "Problem Solving",
-    skills: ["Critical Thinking", "Analytical Skills", "Solution Design"]
-  },
-  {
-    icon: TrendingUp,
-    title: "Adaptability & Continuous Learning",
-    skills: ["Growth Mindset", "Technology Adoption", "Self-directed Learning"]
+    title: "Business Management",
+    skills: ["Strategic Planning", "Project Management", "Business Analysis", "Process Optimization"]
   }
 ];
 

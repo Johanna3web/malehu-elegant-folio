@@ -1,24 +1,32 @@
-import { GraduationCap, Award } from "lucide-react";
+import { GraduationCap, Award, Upload } from "lucide-react";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
+import ImageUpload from "./ImageUpload";
+import { useState } from "react";
 
 const educationData = [
   {
     degree: "N4–N6 Certificates in Business Management",
     institution: "Educational Institution",
-    year: "Year Completed",
+    year: "2023",
     description: "Comprehensive business management training covering core principles, operations, and strategic planning."
   },
   {
-    degree: "FNB App Academy Certificate of Completion",
-    institution: "FNB App Academy",
-    year: "2025",
-    description: "Intensive training in application development, digital innovation, and modern technology practices.",
+    degree: "Full Stack Development Certificate",
+    institution: "FNB Academy",
+    year: "2024",
+    description: "Comprehensive full-stack development training covering HTML, CSS, JavaScript, React, Node.js, and modern web development practices.",
     highlight: true
   }
 ];
 
 const Education = () => {
+  const [certificates, setCertificates] = useState<string[]>([]);
+
+  const handleCertificateUpload = (url: string) => {
+    setCertificates(prev => [...prev, url]);
+  };
+
   return (
     <section id="education" className="py-24">
       <div className="container mx-auto px-6">
@@ -53,6 +61,44 @@ const Education = () => {
               </div>
             </Card>
           ))}
+        </div>
+
+        {/* Certificate Upload Section */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <Card className="p-8 bg-card shadow-soft border-border">
+            <div className="flex items-center gap-4 mb-6">
+              <Upload className="text-accent" size={32} />
+              <div>
+                <h3 className="text-2xl font-heading font-bold text-primary">Upload Your Certificates</h3>
+                <p className="text-foreground/70">Add your professional certificates and qualifications</p>
+              </div>
+            </div>
+            <ImageUpload
+              bucket="certificates"
+              onUploadComplete={handleCertificateUpload}
+              accept="application/pdf,image/jpeg,image/png"
+              maxSize={10}
+              label="Upload Certificate (PDF or Image)"
+            />
+            {certificates.length > 0 && (
+              <div className="mt-6">
+                <h4 className="font-semibold text-primary mb-3">Uploaded Certificates:</h4>
+                <div className="space-y-2">
+                  {certificates.map((cert, idx) => (
+                    <a
+                      key={idx}
+                      href={cert}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block text-accent hover:underline"
+                    >
+                      Certificate {idx + 1}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </Card>
         </div>
 
         {/* Professional Certifications */}
