@@ -1,8 +1,6 @@
-import { useState } from "react";
-import ImageUpload from "./ImageUpload";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const About = () => {
-  const [profileImageUrl, setProfileImageUrl] = useState<string>("");
 
   return (
     <section id="about" className="py-24 bg-muted/30">
@@ -13,21 +11,11 @@ const About = () => {
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* Profile Image */}
           <div className="flex justify-center animate-fade-in">
-            {profileImageUrl ? (
-              <img
-                src={profileImageUrl}
-                alt="Malehu Johanna Segoapa"
-                className="rounded-2xl shadow-elegant max-w-sm w-full object-cover"
-              />
-            ) : (
-              <div className="w-full max-w-sm">
-                <ImageUpload
-                  bucket="profile-pictures"
-                  onUploadComplete={setProfileImageUrl}
-                  label="Upload Profile Picture"
-                />
-              </div>
-            )}
+            <img
+              src={profilePhoto}
+              alt="Malehu Johanna Segoapa"
+              className="rounded-2xl shadow-elegant max-w-sm w-full object-cover"
+            />
           </div>
 
           {/* Bio Text */}

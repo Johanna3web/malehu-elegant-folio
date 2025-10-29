@@ -108,19 +108,19 @@ const Contact = () => {
                   size="lg"
                   variant="outline"
                   className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-smooth justify-start"
-                  onClick={() => alert("Add your LinkedIn profile link")}
+                  onClick={() => window.open('https://www.linkedin.com/in/malehu-johanna-801481390', '_blank')}
                 >
                   <Linkedin className="mr-3" size={20} />
-                  Add LinkedIn Profile
+                  LinkedIn Profile
                 </Button>
                 <Button 
                   size="lg"
                   variant="outline"
                   className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-smooth justify-start"
-                  onClick={() => alert("Add your GitHub profile link")}
+                  onClick={() => window.open('https://github.com/Johanna3web', '_blank')}
                 >
                   <Github className="mr-3" size={20} />
-                  Add GitHub Profile
+                  GitHub Profile
                 </Button>
               </div>
             </div>
