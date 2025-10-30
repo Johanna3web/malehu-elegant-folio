@@ -108,7 +108,7 @@ const Contact = () => {
                   size="lg"
                   variant="outline"
                   className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-smooth justify-start"
-                  onClick={() => window.open('https://www.linkedin.com/in/malehu-johanna-801481390', '_blank')}
+                  onClick={() => window.open('https://www.linkedin.com/in/malehu-johanna-segoapa-801481390', '_blank')}
                 >
                   <Linkedin className="mr-3" size={20} />
                   LinkedIn Profile

@@ -22,12 +22,20 @@ const Projects = () => {
   const [projects] = useState<Project[]>([
     {
       id: "1",
-      title: "Project Title",
-      description: "Brief description of the project and your role in it. Highlight key achievements and technologies used.",
+      title: "AI Generator Hub",
+      description: "A comprehensive AI-powered platform featuring multiple AI generators for various creative and productivity tasks.",
+      tools: ["React", "TypeScript", "Tailwind CSS", "AI Integration"],
+      links: {
+        live: "https://johanna-segoapa.vercel.app/",
+      },
+    },
+    {
+      id: "2",
+      title: "Resume Builder",
+      description: "An intuitive resume building application that helps users create professional resumes with ease.",
       tools: ["React", "TypeScript", "Tailwind CSS"],
       links: {
-        github: "#",
-        live: "#",
+        live: "https://tempo-deployment-d1f34b8f-e90b-4515-ashy.vercel.app/",
       },
     },
   ]);
