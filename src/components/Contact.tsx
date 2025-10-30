@@ -5,7 +5,6 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
 import { useToast } from "@/hooks/use-toast";
-import ImageUpload from "./ImageUpload";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,7 +13,6 @@ const Contact = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [resumeUrl, setResumeUrl] = useState<string>("");
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -130,26 +128,20 @@ const Contact = () => {
               <h3 className="text-2xl font-heading font-semibold text-primary mb-6">
                 Download Résumé
               </h3>
-              {resumeUrl ? (
-                <Button 
-                  size="lg"
-                  className="w-full bg-accent hover:bg-hover transition-smooth shadow-soft"
-                  onClick={() => window.open(resumeUrl, "_blank")}
-                >
-                  <Download className="mr-3" size={20} />
-                  Download My Résumé
-                </Button>
-              ) : (
-                <div>
-                  <ImageUpload
-                    bucket="resumes"
-                    onUploadComplete={setResumeUrl}
-                    accept="application/pdf"
-                    maxSize={10}
-                    label="Upload Résumé (PDF)"
-                  />
-                </div>
-              )}
+              <Button 
+                size="lg"
+                className="w-full bg-accent hover:bg-hover transition-smooth shadow-soft"
+                onClick={() => {
+                  // Link to resume file - add your resume to src/assets/resume.pdf
+                  const link = document.createElement('a');
+                  link.href = '/resume.pdf';
+                  link.download = 'Malehu_Johanna_Segoapa_Resume.pdf';
+                  link.click();
+                }}
+              >
+                <Download className="mr-3" size={20} />
+                Download My Résumé
+              </Button>
             </div>
           </div>
         </div>

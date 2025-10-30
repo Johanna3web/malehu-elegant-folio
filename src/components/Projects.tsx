@@ -3,7 +3,8 @@ import { ExternalLink, Github, Award } from "lucide-react";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import ImageUpload from "./ImageUpload";
+import resumeBuilderImg from "@/assets/projects/resume-builder.png";
+import aiGeneratorHubImg from "@/assets/projects/ai-generator-hub.png";
 
 interface Project {
   id: string;
@@ -25,6 +26,7 @@ const Projects = () => {
       title: "AI Generator Hub",
       description: "A comprehensive AI-powered platform featuring multiple AI generators for various creative and productivity tasks.",
       tools: ["React", "TypeScript", "Tailwind CSS", "AI Integration"],
+      imageUrl: aiGeneratorHubImg,
       links: {
         live: "https://johanna-segoapa.vercel.app/",
       },
@@ -34,18 +36,12 @@ const Projects = () => {
       title: "Resume Builder",
       description: "An intuitive resume building application that helps users create professional resumes with ease.",
       tools: ["React", "TypeScript", "Tailwind CSS"],
+      imageUrl: resumeBuilderImg,
       links: {
         live: "https://tempo-deployment-d1f34b8f-e90b-4515-ashy.vercel.app/",
       },
     },
   ]);
-
-  const [showUpload, setShowUpload] = useState<string | null>(null);
-
-  const handleUploadComplete = (projectId: string, url: string) => {
-    console.log(`Project ${projectId} image uploaded:`, url);
-    setShowUpload(null);
-  };
 
   return (
     <section id="projects" className="py-24">
@@ -62,32 +58,11 @@ const Projects = () => {
             >
               {/* Project Image */}
               <div className="relative h-48 bg-muted/50 overflow-hidden">
-                {project.imageUrl ? (
-                  <img
-                    src={project.imageUrl}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-smooth"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center">
-                    {showUpload === project.id ? (
-                      <div className="p-4 w-full">
-                        <ImageUpload
-                          bucket="project-images"
-                          onUploadComplete={(url) => handleUploadComplete(project.id, url)}
-                          label="Upload Project Image"
-                        />
-                      </div>
-                    ) : (
-                      <Button
-                        variant="outline"
-                        onClick={() => setShowUpload(project.id)}
-                      >
-                        Add Project Image
-                      </Button>
-                    )}
-                  </div>
-                )}
+                <img
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-smooth"
+                />
               </div>
 
               {/* Project Content */}
