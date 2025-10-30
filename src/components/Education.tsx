@@ -1,6 +1,12 @@
-import { GraduationCap, ExternalLink } from "lucide-react";
+import { GraduationCap, ExternalLink, ChevronDown } from "lucide-react";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "./ui/accordion";
 import n4Cert from "@/assets/certificates/n4-business-management.png";
 import n5Cert from "@/assets/certificates/n5-business-management.png";
 import n6Cert from "@/assets/certificates/n6-business-management.png";
@@ -95,109 +101,120 @@ const Education = () => {
           ))}
         </div>
 
-        {/* Coursera Certificates */}
-        <div className="max-w-6xl mx-auto mb-16">
-          <h3 className="text-3xl font-heading font-bold text-primary mb-8 text-center">
-            Coursera Certificates
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {courseraData.map((cert, index) => (
-              <Card 
-                key={index}
-                className="group overflow-hidden border-border hover-lift bg-card shadow-soft cursor-pointer animate-fade-in"
-                style={{ animationDelay: `${index * 0.05}s` }}
-                onClick={() => window.open(cert.image, '_blank')}
-              >
-                <div className="relative aspect-[3/4] overflow-hidden bg-muted">
-                  <img 
-                    src={cert.image} 
-                    alt={cert.name}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                    <div className="p-4 w-full">
-                      <ExternalLink className="text-accent mb-2" size={24} />
-                      <p className="text-sm text-foreground/90">Click to view full certificate</p>
-                    </div>
-                  </div>
+        {/* Certificates Accordion */}
+        <div className="max-w-4xl mx-auto">
+          <Accordion type="single" collapsible className="space-y-4">
+            {/* Coursera Certificates */}
+            <AccordionItem value="coursera" className="border border-border rounded-lg px-6 bg-card shadow-soft">
+              <AccordionTrigger className="text-2xl font-heading font-semibold text-primary hover:text-accent">
+                Coursera Certificates ({courseraData.length})
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="grid md:grid-cols-2 gap-4 pt-4">
+                  {courseraData.map((cert, index) => (
+                    <Card 
+                      key={index}
+                      className="group overflow-hidden border-border hover-lift bg-card shadow-soft cursor-pointer animate-fade-in"
+                      style={{ animationDelay: `${index * 0.05}s` }}
+                      onClick={() => window.open(cert.image, '_blank')}
+                    >
+                      <div className="relative aspect-[3/4] overflow-hidden bg-muted">
+                        <img 
+                          src={cert.image} 
+                          alt={cert.name}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                          <div className="p-4 w-full">
+                            <ExternalLink className="text-accent mb-2" size={24} />
+                            <p className="text-sm text-foreground/90">Click to view full certificate</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <Badge variant="secondary" className="mb-2">{cert.category}</Badge>
+                        <h4 className="font-heading font-semibold text-primary text-sm">{cert.name}</h4>
+                      </div>
+                    </Card>
+                  ))}
                 </div>
-                <div className="p-4">
-                  <Badge variant="secondary" className="mb-2">{cert.category}</Badge>
-                  <h4 className="font-heading font-semibold text-primary">{cert.name}</h4>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
+              </AccordionContent>
+            </AccordionItem>
 
-        {/* Business Management Certificates */}
-        <div className="max-w-6xl mx-auto mb-16">
-          <h3 className="text-3xl font-heading font-bold text-primary mb-8 text-center">
-            N4–N6 Business Management Certificates
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {businessData.map((cert, index) => (
-              <Card 
-                key={index}
-                className="group overflow-hidden border-border hover-lift bg-card shadow-soft cursor-pointer animate-fade-in"
-                style={{ animationDelay: `${index * 0.05}s` }}
-                onClick={() => window.open(cert.image, '_blank')}
-              >
-                <div className="relative aspect-[3/4] overflow-hidden bg-muted">
-                  <img 
-                    src={cert.image} 
-                    alt={cert.name}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                    <div className="p-4 w-full">
-                      <ExternalLink className="text-accent mb-2" size={24} />
-                      <p className="text-sm text-foreground/90">Click to view full certificate</p>
-                    </div>
-                  </div>
+            {/* Business Management Certificates */}
+            <AccordionItem value="business" className="border border-border rounded-lg px-6 bg-card shadow-soft">
+              <AccordionTrigger className="text-2xl font-heading font-semibold text-primary hover:text-accent">
+                N4–N6 Business Management Certificates ({businessData.length})
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
+                  {businessData.map((cert, index) => (
+                    <Card 
+                      key={index}
+                      className="group overflow-hidden border-border hover-lift bg-card shadow-soft cursor-pointer animate-fade-in"
+                      style={{ animationDelay: `${index * 0.05}s` }}
+                      onClick={() => window.open(cert.image, '_blank')}
+                    >
+                      <div className="relative aspect-[3/4] overflow-hidden bg-muted">
+                        <img 
+                          src={cert.image} 
+                          alt={cert.name}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                          <div className="p-4 w-full">
+                            <ExternalLink className="text-accent mb-2" size={24} />
+                            <p className="text-sm text-foreground/90">Click to view full certificate</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <Badge variant="secondary" className="mb-2">{cert.category}</Badge>
+                        <h4 className="font-heading font-semibold text-primary text-sm">{cert.name}</h4>
+                      </div>
+                    </Card>
+                  ))}
                 </div>
-                <div className="p-4">
-                  <Badge variant="secondary" className="mb-2">{cert.category}</Badge>
-                  <h4 className="font-heading font-semibold text-primary">{cert.name}</h4>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
+              </AccordionContent>
+            </AccordionItem>
 
-        {/* FNB Academy Certificate */}
-        <div className="max-w-6xl mx-auto">
-          <h3 className="text-3xl font-heading font-bold text-primary mb-8 text-center">
-            FNB Academy Certificate
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {fnbData.map((cert, index) => (
-              <Card 
-                key={index}
-                className="group overflow-hidden border-border hover-lift bg-card shadow-soft cursor-pointer animate-fade-in"
-                style={{ animationDelay: `${index * 0.05}s` }}
-                onClick={() => window.open(cert.image, '_blank')}
-              >
-                <div className="relative aspect-[3/4] overflow-hidden bg-muted">
-                  <img 
-                    src={cert.image} 
-                    alt={cert.name}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                    <div className="p-4 w-full">
-                      <ExternalLink className="text-accent mb-2" size={24} />
-                      <p className="text-sm text-foreground/90">Click to view full certificate</p>
-                    </div>
-                  </div>
+            {/* FNB Academy Certificate */}
+            <AccordionItem value="fnb" className="border border-border rounded-lg px-6 bg-card shadow-soft">
+              <AccordionTrigger className="text-2xl font-heading font-semibold text-primary hover:text-accent">
+                Full Stack Development Certificate ({fnbData.length})
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
+                  {fnbData.map((cert, index) => (
+                    <Card 
+                      key={index}
+                      className="group overflow-hidden border-border hover-lift bg-card shadow-soft cursor-pointer animate-fade-in"
+                      style={{ animationDelay: `${index * 0.05}s` }}
+                      onClick={() => window.open(cert.image, '_blank')}
+                    >
+                      <div className="relative aspect-[3/4] overflow-hidden bg-muted">
+                        <img 
+                          src={cert.image} 
+                          alt={cert.name}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                          <div className="p-4 w-full">
+                            <ExternalLink className="text-accent mb-2" size={24} />
+                            <p className="text-sm text-foreground/90">Click to view full certificate</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <Badge variant="secondary" className="mb-2">{cert.category}</Badge>
+                        <h4 className="font-heading font-semibold text-primary text-sm">{cert.name}</h4>
+                      </div>
+                    </Card>
+                  ))}
                 </div>
-                <div className="p-4">
-                  <Badge variant="secondary" className="mb-2">{cert.category}</Badge>
-                  <h4 className="font-heading font-semibold text-primary">{cert.name}</h4>
-                </div>
-              </Card>
-            ))}
-          </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </div>
     </section>
