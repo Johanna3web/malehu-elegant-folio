@@ -22,6 +22,7 @@ import advancedLearning from "@/assets/certificates/advanced-learning-algorithms
 import unsupervisedLearning from "@/assets/certificates/unsupervised-learning.png";
 import googleResponsibleAI from "@/assets/certificates/google-responsible-ai.png";
 import jhTrustworthyAI from "@/assets/certificates/johns-hopkins-trustworthy-ai.png";
+import generativeLLMs from "@/assets/certificates/generative-ai-with-llms.png";
 
 const educationData = [
   {
@@ -40,8 +41,8 @@ const educationData = [
 ];
 
 const courseraData = [
+  { name: "Generative AI with Large Language Models (AWS x DeepLearning.AI)", image: generativeLLMs, category: "Coursera" },
   { name: "AI For Everyone", image: aiForEveryone, category: "Coursera" },
-  { name: "Supervised Machine Learning", image: supervisedML, category: "Coursera" },
   { name: "Introduction to AI (Google)", image: googleAI, category: "Coursera" },
   { name: "Introduction to AI (IBM)", image: ibmAI, category: "Coursera" },
   { name: "AI Essentials (Intel)", image: intelAI, category: "Coursera" },
