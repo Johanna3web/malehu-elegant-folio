@@ -7,6 +7,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/components/ui/use-toast";
 import LeadCaptureForm from "./LeadCaptureForm";
 import FAQMode from "./FAQMode";
+import chatbotAvatar from "@/assets/chatbot-avatar.png";
 
 interface Message {
   role: 'user' | 'assistant';
@@ -150,7 +151,7 @@ const ChatWidget = () => {
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-border bg-primary text-primary-foreground rounded-t-lg">
             <div className="flex items-center gap-2">
-              <MessageCircle size={20} />
+              <img src={chatbotAvatar} alt="Chatbot" className="w-10 h-10 rounded-full" />
               <div>
                 <h3 className="font-semibold">Portfolio Assistant</h3>
                 <p className="text-xs opacity-90">Ask me anything!</p>
@@ -214,17 +215,22 @@ const ChatWidget = () => {
                     key={idx}
                     className={`mb-4 ${msg.role === 'user' ? 'text-right' : 'text-left'}`}
                   >
-                    <div
-                      className={`inline-block max-w-[80%] px-4 py-2 rounded-lg ${
-                        msg.role === 'user'
-                          ? 'bg-primary text-primary-foreground'
-                          : 'bg-muted text-foreground'
-                      }`}
-                    >
-                      <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
-                      <p className="text-xs opacity-70 mt-1">
-                        {msg.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                      </p>
+                    <div className={`flex items-start gap-2 ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                      {msg.role === 'assistant' && (
+                        <img src={chatbotAvatar} alt="Bot" className="w-8 h-8 rounded-full flex-shrink-0 mt-1" />
+                      )}
+                      <div
+                        className={`inline-block max-w-[80%] px-4 py-2 rounded-lg ${
+                          msg.role === 'user'
+                            ? 'bg-primary text-primary-foreground'
+                            : 'bg-muted text-foreground'
+                        }`}
+                      >
+                        <p className="text-sm whitespace-pre-wrap">{msg.content}</p>
+                        <p className="text-xs opacity-70 mt-1">
+                          {msg.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 ))}
