@@ -5,6 +5,7 @@ import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import resumeBuilderImg from "@/assets/projects/resume-builder.png";
 import aiGeneratorHubImg from "@/assets/projects/ai-generator-hub.png";
+import sentimentDashboardImg from "@/assets/projects/sentiment-dashboard.png";
 
 interface Project {
   id: string;
@@ -39,6 +40,16 @@ const Projects = () => {
       imageUrl: resumeBuilderImg,
       links: {
         live: "https://tempo-deployment-d1f34b8f-e90b-4515-ashy.vercel.app/",
+      },
+    },
+    {
+      id: "3",
+      title: "Sentiment AI Dashboard",
+      description: "A comprehensive analytics dashboard for tracking and visualizing sentiment analysis metrics with real-time insights.",
+      tools: ["React", "TypeScript", "AI/ML", "Data Visualization"],
+      imageUrl: sentimentDashboardImg,
+      links: {
+        live: "https://sentiment-ai-1682327a.base44.app/",
       },
     },
   ]);
