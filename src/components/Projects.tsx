@@ -6,6 +6,7 @@ import { Button } from "./ui/button";
 import resumeBuilderImg from "@/assets/projects/resume-builder.png";
 import aiGeneratorHubImg from "@/assets/projects/ai-generator-hub.png";
 import sentimentDashboardImg from "@/assets/projects/sentiment-dashboard.png";
+import landbotChatbotImg from "@/assets/projects/landbot-chatbot.png";
 
 interface Project {
   id: string;
@@ -50,6 +51,16 @@ const Projects = () => {
       imageUrl: sentimentDashboardImg,
       links: {
         live: "https://sentiment-ai-1682327a.base44.app/",
+      },
+    },
+    {
+      id: "4",
+      title: "Landbot AI Chatbot",
+      description: "An interactive conversational AI chatbot built with Landbot, featuring natural language processing and automated customer engagement.",
+      tools: ["Landbot", "AI/ML", "NLP", "Conversational Design"],
+      imageUrl: landbotChatbotImg,
+      links: {
+        live: "https://landbot.online/v3/H-3158721-8RT63U43IP36BDKN/index.html",
       },
     },
   ]);
