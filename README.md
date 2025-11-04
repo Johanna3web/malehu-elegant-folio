@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: [https://lovable.dev/projects/3907ae7e-3f7c-4f01-a4db-fe967ea4cb99](https://preview--malehu-elegant-folio.lovable.app/)
+**URL**:[ [https://lovable.dev/projects/3907ae7e-3f7c-4f01-a4db-fe967ea4cb99](https://preview--malehu-elegant-folio.lovable.app/)](https://malehu-elegant-folio.vercel.app/)
 
 ## How can I edit this code?
 
