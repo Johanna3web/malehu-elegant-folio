@@ -36,9 +36,13 @@ const Hero = () => {
             Contact Me
           </Button>
         </div>
-        <div className="mt-16 animate-bounce">
+        <button 
+          onClick={() => scrollToSection("about")}
+          className="mt-16 animate-bounce cursor-pointer hover:opacity-70 transition-opacity"
+          aria-label="Scroll to about section"
+        >
           <ArrowDown className="mx-auto text-accent" size={32} />
-        </div>
+        </button>
       </div>
     </section>
   );

@@ -10,6 +10,7 @@ interface FAQItem {
 const faqData: FAQItem[] = [
   { question: "What are Johanna's main technical skills?", category: "Skills" },
   { question: "Tell me about her AI/ML experience", category: "Skills" },
+  { question: "What technologies does she work with?", category: "Skills" },
   { question: "What projects has she worked on?", category: "Projects" },
   { question: "What is the AI Generator Hub project?", category: "Projects" },
   { question: "Tell me about the Sentiment AI Dashboard", category: "Projects" },
@@ -18,7 +19,6 @@ const faqData: FAQItem[] = [
   { question: "What work experience does she have?", category: "Experience" },
   { question: "How can I contact Johanna?", category: "Contact" },
   { question: "Where can I find her on social media?", category: "Contact" },
-  { question: "What technologies does she work with?", category: "Skills" },
   { question: "Is she available for new opportunities?", category: "Contact" }
 ];
 
