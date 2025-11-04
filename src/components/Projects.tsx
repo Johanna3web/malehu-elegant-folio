@@ -7,6 +7,7 @@ import resumeBuilderImg from "@/assets/projects/resume-builder.png";
 import aiGeneratorHubImg from "@/assets/projects/ai-generator-hub.png";
 import sentimentDashboardImg from "@/assets/projects/sentiment-dashboard.png";
 import landbotChatbotImg from "@/assets/projects/landbot-chatbot.png";
+import freshOrRottenImg from "@/assets/projects/fresh-or-rotten.png";
 
 interface Project {
   id: string;
@@ -55,12 +56,22 @@ const Projects = () => {
     },
     {
       id: "4",
-      title: "Landbot AI Chatbot",
-      description: "An interactive conversational AI chatbot built with Landbot, featuring natural language processing and automated customer engagement.",
-      tools: ["Landbot", "AI/ML", "NLP", "Conversational Design"],
+      title: "AI Chatbot",
+      description: "An interactive conversational AI chatbot featuring natural language processing and automated customer engagement.",
+      tools: ["AI/ML", "NLP", "Conversational Design"],
       imageUrl: landbotChatbotImg,
       links: {
         live: "https://landbot.online/v3/H-3158721-8RT63U43IP36BDKN/index.html",
+      },
+    },
+    {
+      id: "5",
+      title: "Fresh or Rotten AI Detector",
+      description: "An AI-powered mobile prototype that detects whether fruits and vegetables are fresh or rotten using machine learning image recognition.",
+      tools: ["AI/ML", "Teachable Machine", "Image Recognition", "Figma"],
+      imageUrl: freshOrRottenImg,
+      links: {
+        live: "https://www.figma.com/proto/JHN39GavsiQxhZcvp4OgKV/Youth-in-Power-Teachable-Machine?node-id=22-121&t=7uQalgkrmz0ywgOD-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A4&show-proto-sidebar=1",
       },
     },
   ]);
