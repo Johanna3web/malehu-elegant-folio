@@ -12,7 +12,7 @@ const Navigation = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      const sections = ["home", "about", "education", "projects", "contact"];
+      const sections = ["home", "about", "education", "experience", "skills", "projects", "contact"];
       const current = sections.find((section) => {
         const element = document.getElementById(section);
         if (element) {
@@ -39,7 +39,9 @@ const Navigation = () => {
   const navLinks = [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
-    { id: "education", label: "Education, Experience & Skills" },
+    { id: "education", label: "Education" },
+    { id: "experience", label: "Experience" },
+    { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
     { id: "contact", label: "Contact" },
   ];

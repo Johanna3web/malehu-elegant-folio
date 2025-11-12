@@ -5,32 +5,22 @@ const skillsData = [
   {
     icon: Code,
     title: "Frontend Development",
-    skills: ["HTML5", "CSS3", "JavaScript (ES6+)", "React", "Responsive Design"]
+    skills: ["HTML5, CSS3, JavaScript", "React", "Responsive Design"]
   },
   {
     icon: Database,
-    title: "Backend Development",
-    skills: ["Node.js", "RESTful APIs", "Database Management", "Server-side Logic"]
-  },
-  {
-    icon: Palette,
-    title: "UI/UX Design",
-    skills: ["User Interface Design", "User Experience", "Prototyping", "Design Principles"]
+    title: "Backend & APIs",
+    skills: ["Node.js", "RESTful APIs", "Database Management"]
   },
   {
     icon: Brain,
-    title: "Problem Solving",
-    skills: ["Critical Thinking", "Analytical Skills", "Debugging", "Solution Design"]
-  },
-  {
-    icon: Users,
-    title: "Teamwork & Collaboration",
-    skills: ["Team Communication", "Agile Methodologies", "Peer Programming", "Project Collaboration"]
+    title: "AI & Machine Learning",
+    skills: ["Python", "Data Analysis", "ML Models"]
   },
   {
     icon: Target,
-    title: "Business Management",
-    skills: ["Strategic Planning", "Project Management", "Business Analysis", "Process Optimization"]
+    title: "Business & Management",
+    skills: ["Project Management", "Strategic Planning", "Business Analysis"]
   }
 ];
 
@@ -41,7 +31,7 @@ const Skills = () => {
         <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-12 text-center animate-fade-in">
           Skills
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {skillsData.map((category, index) => {
             const Icon = category.icon;
             return (

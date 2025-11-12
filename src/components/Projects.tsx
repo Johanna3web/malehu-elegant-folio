@@ -3,18 +3,12 @@ import { ExternalLink, Github, Award } from "lucide-react";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import resumeBuilderImg from "@/assets/projects/resume-builder.png";
-import aiGeneratorHubImg from "@/assets/projects/ai-generator-hub.png";
-import sentimentDashboardImg from "@/assets/projects/sentiment-dashboard.png";
-import landbotChatbotImg from "@/assets/projects/landbot-chatbot.png";
-import freshOrRottenImg from "@/assets/projects/fresh-or-rotten.png";
 
 interface Project {
   id: string;
   title: string;
   description: string;
   tools: string[];
-  imageUrl?: string;
   links?: {
     github?: string;
     live?: string;
@@ -29,7 +23,6 @@ const Projects = () => {
       title: "AI Generator Hub",
       description: "A comprehensive AI-powered platform featuring multiple AI generators for various creative and productivity tasks.",
       tools: ["React", "TypeScript", "Tailwind CSS", "AI Integration"],
-      imageUrl: aiGeneratorHubImg,
       links: {
         live: "https://johanna-segoapa.vercel.app/",
       },
@@ -39,7 +32,6 @@ const Projects = () => {
       title: "Resume Builder",
       description: "An intuitive resume building application that helps users create professional resumes with ease.",
       tools: ["React", "TypeScript", "Tailwind CSS"],
-      imageUrl: resumeBuilderImg,
       links: {
         live: "https://tempo-deployment-d1f34b8f-e90b-4515-ashy.vercel.app/",
       },
@@ -49,7 +41,6 @@ const Projects = () => {
       title: "Sentiment AI Dashboard",
       description: "A comprehensive analytics dashboard for tracking and visualizing sentiment analysis metrics with real-time insights.",
       tools: ["React", "TypeScript", "AI/ML", "Data Visualization"],
-      imageUrl: sentimentDashboardImg,
       links: {
         live: "https://sentiment-ai-1682327a.base44.app/",
       },
@@ -59,7 +50,6 @@ const Projects = () => {
       title: "AI Chatbot",
       description: "An interactive conversational AI chatbot featuring natural language processing and automated customer engagement.",
       tools: ["AI/ML", "NLP", "Conversational Design"],
-      imageUrl: landbotChatbotImg,
       links: {
         live: "https://landbot.online/v3/H-3158721-8RT63U43IP36BDKN/index.html",
       },
@@ -69,7 +59,6 @@ const Projects = () => {
       title: "Fresh or Rotten AI Detector",
       description: "An AI-powered mobile prototype that detects whether fruits and vegetables are fresh or rotten using machine learning image recognition.",
       tools: ["AI/ML", "Teachable Machine", "Image Recognition", "Figma"],
-      imageUrl: freshOrRottenImg,
       links: {
         live: "https://www.figma.com/proto/JHN39GavsiQxhZcvp4OgKV/Youth-in-Power-Teachable-Machine?node-id=22-121&t=7uQalgkrmz0ywgOD-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A4&show-proto-sidebar=1",
       },
@@ -89,14 +78,6 @@ const Projects = () => {
               className="overflow-hidden border-border hover-lift bg-card shadow-soft animate-fade-in-up group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Project Image */}
-              <div className="relative h-48 bg-muted/50 overflow-hidden">
-                <img
-                  src={project.imageUrl}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-smooth"
-                />
-              </div>
 
               {/* Project Content */}
               <div className="p-6 space-y-4">
