@@ -109,15 +109,7 @@ const Contact = () => {
                 Connect With Me
               </h3>
               <div className="space-y-4">
-                <Button 
-                  size="lg"
-                  className="w-full bg-primary hover:bg-hover transition-smooth shadow-soft justify-start"
-                  onClick={() => window.location.href = "mailto:johannasegoapa@gmail.com"}
-                >
-                  <Mail className="mr-3" size={20} />
-                  johannasegoapa@gmail.com
-                </Button>
-                <Button 
+                <Button
                   size="lg"
                   variant="outline"
                   className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-smooth justify-start"

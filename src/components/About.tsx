@@ -26,20 +26,6 @@ const About = () => {
             <p>
               With over 29 professional certifications from Coursera, including 12 in Artificial Intelligence, I bring expertise in AI/ML implementation, Web Development, React, JavaScript, Python, Data Analysis, and Business Management. I am committed to continuous learning and using digital innovation to improve business efficiency, enhance user experience, and drive organisational growth.
             </p>
-            
-            {/* Key Skills */}
-            <div className="pt-4">
-              <h3 className="text-xl font-heading font-semibold text-primary mb-4">Key Skills</h3>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-accent/20 text-accent-foreground rounded-full text-sm">AI/ML Implementation</span>
-                <span className="px-3 py-1 bg-accent/20 text-accent-foreground rounded-full text-sm">Web Development</span>
-                <span className="px-3 py-1 bg-accent/20 text-accent-foreground rounded-full text-sm">React & JavaScript</span>
-                <span className="px-3 py-1 bg-accent/20 text-accent-foreground rounded-full text-sm">Python</span>
-                <span className="px-3 py-1 bg-accent/20 text-accent-foreground rounded-full text-sm">Data Analysis</span>
-                <span className="px-3 py-1 bg-accent/20 text-accent-foreground rounded-full text-sm">Business Management</span>
-                <span className="px-3 py-1 bg-accent/20 text-accent-foreground rounded-full text-sm">Project Management</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
