@@ -35,6 +35,12 @@ const courseraData = [
   { name: "Unsupervised Learning, Recommenders, Reinforcement Learning", link: "/certificates/unsupervised-learning.jpg", category: "Coursera" },
   { name: "AI For Everyone", link: "/certificates/ai-for-everyone.pdf", category: "Coursera" },
   { name: "Introduction to Artificial Intelligence", link: "/certificates/intro-to-ai.pdf", category: "Coursera" },
+  { name: "AI Certification 7", link: "/certificates/coursera-ai-7.pdf", category: "Coursera" },
+  { name: "AI Certification 8", link: "/certificates/coursera-ai-8.pdf", category: "Coursera" },
+  { name: "AI Certification 9", link: "/certificates/coursera-ai-9.pdf", category: "Coursera" },
+  { name: "AI Certification 10", link: "/certificates/coursera-ai-10.pdf", category: "Coursera" },
+  { name: "AI Certification 11", link: "/certificates/coursera-ai-11.pdf", category: "Coursera" },
+  { name: "AI Certification 12", link: "/certificates/coursera-ai-12.pdf", category: "Coursera" },
 ];
 
 const businessData = [

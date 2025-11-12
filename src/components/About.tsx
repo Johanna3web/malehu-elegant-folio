@@ -21,13 +21,10 @@ const About = () => {
           {/* Bio Text */}
           <div className="space-y-6 text-lg text-foreground/80 leading-relaxed animate-fade-in-up">
             <p>
-              I'm Malehu Johanna Segoapa, a driven and forward-thinking professional with a background in Business Management and a passion for technology.
+              I am Malehu Johanna Segoapa, a driven and forward-thinking professional with a strong foundation in Business Management and a passion for technology and digital transformation. I hold N4–N6 Business Management qualifications and a Full Stack Development Certificate from the FNB App Academy. Currently, I serve as a Digital Associate at CAPACITI, where I apply innovative solutions to business and digital challenges.
             </p>
             <p>
-              After completing my N4 to N6 Business Management qualifications and the FNB App Academy in 2025, I've continued to work through my role as a Digital Associate at CAPACITI.
-            </p>
-            <p>
-              With over 29 professional certifications from Coursera, including 12 in Artificial Intelligence, I'm committed to lifelong learning and using digital innovation to create meaningful business solutions.
+              With over 29 professional certifications from Coursera, including 12 in Artificial Intelligence, I bring expertise in AI/ML implementation, Web Development, React, JavaScript, Python, Data Analysis, and Business Management. I am committed to continuous learning and using digital innovation to improve business efficiency, enhance user experience, and drive organisational growth.
             </p>
             
             {/* Key Skills */}
