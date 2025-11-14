@@ -135,29 +135,19 @@ const Contact = () => {
               <h3 className="text-2xl font-heading font-semibold text-primary mb-6">
                 Download Résumé
               </h3>
-              <div className="space-y-4">
-                <Button 
-                  size="lg"
-                  className="w-full bg-accent hover:bg-hover transition-smooth shadow-soft"
-                  onClick={() => {
-                    const link = document.createElement('a');
-                    link.href = '/resume.pdf';
-                    link.download = 'Malehu_Johanna_Segoapa_Resume.pdf';
-                    link.click();
-                  }}
-                >
-                  <Download className="mr-3" size={20} />
-                  Download My Résumé
-                </Button>
-                <Button 
-                  size="lg"
-                  variant="outline"
-                  className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-smooth"
-                  onClick={() => window.open('https://flowcv.com/resume/i1ot239em7oo', '_blank')}
-                >
-                  View Online CV
-                </Button>
-              </div>
+              <Button 
+                size="lg"
+                className="w-full bg-accent hover:bg-hover transition-smooth shadow-soft"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/resume.pdf';
+                  link.download = 'Malehu_Johanna_Segoapa_Resume.pdf';
+                  link.click();
+                }}
+              >
+                <Download className="mr-3" size={20} />
+                Download My Résumé
+              </Button>
             </div>
           </div>
         </div>

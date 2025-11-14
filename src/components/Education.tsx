@@ -22,7 +22,7 @@ const educationData = [
   {
     degree: "Full Stack Development Certificate",
     institution: "FNB Academy",
-    year: "2024",
+    year: "2025",
     description: "Comprehensive full-stack development training covering HTML, CSS, JavaScript, React, Node.js, and modern web development practices.",
     highlight: true
   }
