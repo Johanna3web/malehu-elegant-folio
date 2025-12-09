@@ -11,6 +11,8 @@ import n4Cert from "@/assets/certificates/n4-business-management.png";
 import n5Cert from "@/assets/certificates/n5-business-management.png";
 import n6Cert from "@/assets/certificates/n6-business-management.png";
 import fnbCert from "@/assets/certificates/fnb-full-stack-development.png";
+import aiMlQuiz1 from "@/assets/certificates/ai-ml-fundamentals-quiz-1.png";
+import aiMlQuiz2 from "@/assets/certificates/ai-ml-fundamentals-quiz-2.png";
 
 const educationData = [
   {
@@ -53,9 +55,9 @@ const fnbData = [
   { name: "Full Stack Development", image: fnbCert, category: "FNB Academy" },
 ];
 
-const quizData = [
-  { name: "1st Quiz Certificate", link: "/certificates/1st-quiz-certificate.pdf", category: "Quiz" },
-  { name: "2nd Quiz Certificate", link: "/certificates/2nd-quiz-certificate.pdf", category: "Quiz" },
+const capacitiData = [
+  { name: "AI & Machine Learning Fundamentals - Quiz 1", image: aiMlQuiz1, category: "CAPACITI" },
+  { name: "AI & Machine Learning Fundamentals - Quiz 2", image: aiMlQuiz2, category: "CAPACITI" },
 ];
 
 const Education = () => {
@@ -198,25 +200,37 @@ const Education = () => {
               </AccordionContent>
             </AccordionItem>
 
-            {/* Quiz Certificates */}
-            <AccordionItem value="quiz" className="border border-border rounded-lg px-6 bg-card shadow-soft">
+            {/* CAPACITI Certificates */}
+            <AccordionItem value="capaciti" className="border border-border rounded-lg px-6 bg-card shadow-soft">
               <AccordionTrigger className="text-2xl font-heading font-semibold text-primary hover:text-accent">
-                Quiz Certificates ({quizData.length})
+                CAPACITI Certificates ({capacitiData.length})
               </AccordionTrigger>
               <AccordionContent>
-                <div className="space-y-3 pt-4">
-                  {quizData.map((cert, index) => (
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
+                  {capacitiData.map((cert, index) => (
                     <Card 
                       key={index}
-                      className="p-4 border-border hover-lift bg-card shadow-soft cursor-pointer animate-fade-in flex items-center justify-between"
+                      className="group overflow-hidden border-border hover-lift bg-card shadow-soft cursor-pointer animate-fade-in"
                       style={{ animationDelay: `${index * 0.05}s` }}
-                      onClick={() => window.open(cert.link, '_blank')}
+                      onClick={() => window.open(cert.image, '_blank')}
                     >
-                      <div className="flex-1">
-                        <h4 className="font-heading font-semibold text-primary mb-1">{cert.name}</h4>
-                        <Badge variant="secondary" className="text-xs">{cert.category}</Badge>
+                      <div className="relative aspect-[3/4] overflow-hidden bg-muted">
+                        <img 
+                          src={cert.image} 
+                          alt={cert.name}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                          <div className="p-4 w-full">
+                            <ExternalLink className="text-accent mb-2" size={24} />
+                            <p className="text-sm text-foreground/90">Click to view full certificate</p>
+                          </div>
+                        </div>
                       </div>
-                      <ExternalLink className="text-accent ml-4" size={20} />
+                      <div className="p-4">
+                        <Badge variant="secondary" className="mb-2">{cert.category}</Badge>
+                        <h4 className="font-heading font-semibold text-primary text-sm">{cert.name}</h4>
+                      </div>
                     </Card>
                   ))}
                 </div>
