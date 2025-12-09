@@ -12,7 +12,7 @@ import n5Cert from "@/assets/certificates/n5-business-management.png";
 import n6Cert from "@/assets/certificates/n6-business-management.png";
 import fnbCert from "@/assets/certificates/fnb-full-stack-development.png";
 import aiMlQuiz1 from "@/assets/certificates/ai-ml-fundamentals-quiz-1.png";
-import aiMlQuiz2 from "@/assets/certificates/ai-ml-fundamentals-quiz-2.png";
+import aiForEveryoneCert from "@/assets/certificates/ai-for-everyone-capaciti.png";
 
 const educationData = [
   {
@@ -56,8 +56,8 @@ const fnbData = [
 ];
 
 const capacitiData = [
-  { name: "AI & Machine Learning Fundamentals - Quiz 1", image: aiMlQuiz1, category: "CAPACITI" },
-  { name: "AI & Machine Learning Fundamentals - Quiz 2", image: aiMlQuiz2, category: "CAPACITI" },
+  { name: "AI & Machine Learning Fundamentals", image: aiMlQuiz1, category: "CAPACITI" },
+  { name: "AI For Everyone", image: aiForEveryoneCert, category: "CAPACITI" },
 ];
 
 const Education = () => {

@@ -3,6 +3,13 @@ import { Card } from "./ui/card";
 
 const experienceData = [
   {
+    role: "Data Engineering Associate",
+    company: "Capaciti",
+    period: "Current",
+    description: "Supporting data engineering projects by designing, building, and maintaining data pipelines, transforming raw data into reliable datasets, and collaborating across teams to deliver accurate, scalable, and data-driven solutions.",
+    current: true
+  },
+  {
     role: "Digital Associate",
     company: "Capaciti",
     period: "Current",
