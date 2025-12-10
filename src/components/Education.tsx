@@ -46,8 +46,8 @@ const courseraData = [
 ];
 
 const dataEngineeringData = [
-  { name: "Introduction to Data Engineering", link: "/certificates/coursera-intro-data-engineering.pdf", category: "Coursera" },
-  { name: "Python Project for Data Engineering", link: "/certificates/coursera-python-data-engineering.pdf", category: "Coursera" },
+  { name: "Introduction to Data Engineering", link: "/certificates/coursera-intro-data-engineering.pdf", category: "IBM", description: "An online non-credit course authorized by IBM and offered through Coursera" },
+  { name: "Python Project for Data Engineering", link: "/certificates/coursera-python-data-engineering.pdf", category: "IBM", description: "An online non-credit course authorized by IBM and offered through Coursera" },
 ];
 
 const businessData = [
@@ -106,10 +106,10 @@ const Education = () => {
         {/* Certificates Accordion */}
         <div className="max-w-4xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
-            {/* Coursera Certificates */}
+            {/* Coursera AI Certificates */}
             <AccordionItem value="coursera" className="border border-border rounded-lg px-6 bg-card shadow-soft">
               <AccordionTrigger className="text-2xl font-heading font-semibold text-primary hover:text-accent">
-                Coursera Certificates ({courseraData.length})
+                Coursera AI Certificates ({courseraData.length})
               </AccordionTrigger>
               <AccordionContent>
                 <div className="space-y-3 pt-4">
@@ -131,10 +131,10 @@ const Education = () => {
               </AccordionContent>
             </AccordionItem>
 
-            {/* Data Engineering Certificates */}
+            {/* Coursera Data Engineering Certificates */}
             <AccordionItem value="data-engineering" className="border border-border rounded-lg px-6 bg-card shadow-soft">
               <AccordionTrigger className="text-2xl font-heading font-semibold text-primary hover:text-accent">
-                Data Engineering Certificates ({dataEngineeringData.length})
+                Coursera Data Engineering Certificates ({dataEngineeringData.length})
               </AccordionTrigger>
               <AccordionContent>
                 <div className="space-y-3 pt-4">
@@ -147,6 +147,7 @@ const Education = () => {
                     >
                       <div className="flex-1">
                         <h4 className="font-heading font-semibold text-primary mb-1">{cert.name}</h4>
+                        <p className="text-sm text-muted-foreground mb-1">{cert.description}</p>
                         <Badge variant="secondary" className="text-xs">{cert.category}</Badge>
                       </div>
                       <ExternalLink className="text-accent ml-4" size={20} />
