@@ -12,9 +12,9 @@ const experienceData = [
   {
     role: "Digital Associate",
     company: "Capaciti",
-    period: "Current",
+    period: "2024",
     description: "Supporting digital transformation projects, leveraging technology for business growth, and collaborating across teams to deliver innovative digital solutions.",
-    current: true
+    current: false
   }
 ];
 

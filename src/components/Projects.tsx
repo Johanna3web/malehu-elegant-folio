@@ -63,6 +63,15 @@ const Projects = () => {
         live: "https://www.figma.com/proto/JHN39GavsiQxhZcvp4OgKV/Youth-in-Power-Teachable-Machine?node-id=22-121&t=7uQalgkrmz0ywgOD-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A4&show-proto-sidebar=1",
       },
     },
+    {
+      id: "6",
+      title: "EduManage",
+      description: "A smart student management system designed to streamline grading, attendance, and reporting for teachers. Track grades, analyze performance with AI, and manage student profiles with ease.",
+      tools: ["React", "TypeScript", "AI Analytics", "Student Management"],
+      links: {
+        live: "https://emsms.netlify.app/",
+      },
+    },
   ]);
 
   return (
