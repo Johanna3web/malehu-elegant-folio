@@ -45,6 +45,11 @@ const courseraData = [
   { name: "AI Certification 12", link: "/certificates/coursera-ai-12.pdf", category: "Coursera" },
 ];
 
+const dataEngineeringData = [
+  { name: "Introduction to Data Engineering", link: "/certificates/coursera-intro-data-engineering.pdf", category: "Coursera" },
+  { name: "Python Project for Data Engineering", link: "/certificates/coursera-python-data-engineering.pdf", category: "Coursera" },
+];
+
 const businessData = [
   { name: "N4 Business Management", image: n4Cert, category: "Business Management" },
   { name: "N5 Business Management", image: n5Cert, category: "Business Management" },
@@ -126,7 +131,31 @@ const Education = () => {
               </AccordionContent>
             </AccordionItem>
 
-            {/* Business Management Certificates */}
+            {/* Data Engineering Certificates */}
+            <AccordionItem value="data-engineering" className="border border-border rounded-lg px-6 bg-card shadow-soft">
+              <AccordionTrigger className="text-2xl font-heading font-semibold text-primary hover:text-accent">
+                Data Engineering Certificates ({dataEngineeringData.length})
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="space-y-3 pt-4">
+                  {dataEngineeringData.map((cert, index) => (
+                    <Card 
+                      key={index}
+                      className="p-4 border-border hover-lift bg-card shadow-soft cursor-pointer animate-fade-in flex items-center justify-between"
+                      style={{ animationDelay: `${index * 0.05}s` }}
+                      onClick={() => window.open(cert.link, '_blank')}
+                    >
+                      <div className="flex-1">
+                        <h4 className="font-heading font-semibold text-primary mb-1">{cert.name}</h4>
+                        <Badge variant="secondary" className="text-xs">{cert.category}</Badge>
+                      </div>
+                      <ExternalLink className="text-accent ml-4" size={20} />
+                    </Card>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
             <AccordionItem value="business" className="border border-border rounded-lg px-6 bg-card shadow-soft">
               <AccordionTrigger className="text-2xl font-heading font-semibold text-primary hover:text-accent">
                 N4–N6 Business Management Certificates ({businessData.length})

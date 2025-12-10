@@ -14,7 +14,7 @@ const Hero = () => {
           Malehu Johanna Segoapa
         </h1>
         <p className="text-xl md:text-2xl text-accent mb-4 max-w-2xl mx-auto font-medium">
-          Data Engineering Associate | Digital Associate | Business Management Graduate | Lifelong Learner
+          Data Engineering Associate | Business Management Graduate | Lifelong Learner
         </p>
         <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto leading-relaxed">
           Driven by curiosity and a passion for technology, I combine business insight with digital innovation to create meaningful impact.
