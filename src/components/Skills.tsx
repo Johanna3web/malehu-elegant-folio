@@ -9,18 +9,18 @@ const skillsData = [
   },
   {
     icon: Database,
-    title: "Backend & APIs",
-    skills: ["Node.js", "RESTful APIs", "Database Management"]
+    title: "Data Engineering",
+    skills: ["SQL & NoSQL", "ETL & Pipelines", "Cloud Platforms (AWS/GCP)", "Big Data (Spark/Kafka)", "Data Warehousing"]
   },
   {
     icon: Brain,
-    title: "AI & Machine Learning",
-    skills: ["Python", "Data Analysis", "ML Models"]
+    title: "Data Science & ML",
+    skills: ["Python (Pandas/NumPy)", "Machine Learning", "Statistical Modeling", "Analysis", "Experimentation (A/B Testing)"]
   },
   {
     icon: Target,
-    title: "Business & Management",
-    skills: ["Project Management", "Strategic Planning", "Business Analysis"]
+    title: "Data Analytics & BI",
+    skills: ["Data Visualization", "Business Intelligence (BI)", "SQL Querying", "A/B Testing", "Data Storytelling"]
   }
 ];
 
