@@ -1,5 +1,5 @@
 import { Card } from "./ui/card";
-import { Code, Palette, Database, Users, Target, Brain } from "lucide-react";
+import { Code, Database, Target, Brain, Users, Heart } from "lucide-react";
 
 const skillsData = [
   {
@@ -21,6 +21,11 @@ const skillsData = [
     icon: Target,
     title: "Data Analytics & BI",
     skills: ["Data Visualization", "Business Intelligence (BI)", "SQL Querying", "A/B Testing", "Data Storytelling"]
+  },
+  {
+    icon: Users,
+    title: "Soft Skills",
+    skills: ["Communication (Verbal, Written, Active Listening)", "Teamwork & Collaboration", "Problem-Solving & Critical Thinking", "Adaptability & Flexibility", "Emotional Intelligence"]
   }
 ];
 
@@ -31,7 +36,7 @@ const Skills = () => {
         <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-12 text-center animate-fade-in">
           Skills
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-7xl mx-auto">
           {skillsData.map((category, index) => {
             const Icon = category.icon;
             return (
