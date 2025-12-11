@@ -11,8 +11,6 @@ import n4Cert from "@/assets/certificates/n4-business-management.png";
 import n5Cert from "@/assets/certificates/n5-business-management.png";
 import n6Cert from "@/assets/certificates/n6-business-management.png";
 import fnbCert from "@/assets/certificates/fnb-full-stack-development.png";
-import aiMlQuiz1 from "@/assets/certificates/ai-ml-fundamentals-quiz-1.png";
-import aiForEveryoneCert from "@/assets/certificates/ai-for-everyone-capaciti.png";
 
 const educationData = [
   {
@@ -61,8 +59,8 @@ const fnbData = [
 ];
 
 const capacitiData = [
-  { name: "AI & Machine Learning Fundamentals", image: aiMlQuiz1, category: "CAPACITI" },
-  { name: "AI For Everyone", image: aiForEveryoneCert, category: "CAPACITI" },
+  { name: "AI & Machine Learning Fundamentals", link: "/certificates/ai-ml-fundamentals-capaciti.pdf", category: "CAPACITI" },
+  { name: "AI For Everyone", link: "/certificates/ai-for-everyone-capaciti.pdf", category: "CAPACITI" },
 ];
 
 const Education = () => {
@@ -236,31 +234,19 @@ const Education = () => {
                 CAPACITI Certificates ({capacitiData.length})
               </AccordionTrigger>
               <AccordionContent>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
+                <div className="space-y-3 pt-4">
                   {capacitiData.map((cert, index) => (
                     <Card 
                       key={index}
-                      className="group overflow-hidden border-border hover-lift bg-card shadow-soft cursor-pointer animate-fade-in"
+                      className="p-4 border-border hover-lift bg-card shadow-soft cursor-pointer animate-fade-in flex items-center justify-between"
                       style={{ animationDelay: `${index * 0.05}s` }}
-                      onClick={() => window.open(cert.image, '_blank')}
+                      onClick={() => window.open(cert.link, '_blank')}
                     >
-                      <div className="relative aspect-[3/4] overflow-hidden bg-muted">
-                        <img 
-                          src={cert.image} 
-                          alt={cert.name}
-                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                          <div className="p-4 w-full">
-                            <ExternalLink className="text-accent mb-2" size={24} />
-                            <p className="text-sm text-foreground/90">Click to view full certificate</p>
-                          </div>
-                        </div>
+                      <div className="flex-1">
+                        <h4 className="font-heading font-semibold text-primary mb-1">{cert.name}</h4>
+                        <Badge variant="secondary" className="text-xs">{cert.category}</Badge>
                       </div>
-                      <div className="p-4">
-                        <Badge variant="secondary" className="mb-2">{cert.category}</Badge>
-                        <h4 className="font-heading font-semibold text-primary text-sm">{cert.name}</h4>
-                      </div>
+                      <ExternalLink className="text-accent ml-4" size={20} />
                     </Card>
                   ))}
                 </div>
