@@ -42,16 +42,16 @@ const Skills = () => {
             return (
               <Card 
                 key={index}
-                className="p-6 border-border hover-lift bg-card shadow-soft text-center animate-fade-in-up"
+                className="p-4 border-border hover-lift bg-card shadow-soft text-center animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="bg-accent/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon className="text-accent" size={28} />
+                <div className="bg-accent/20 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Icon className="text-accent" size={22} />
                 </div>
-                <h3 className="text-xl font-heading font-semibold text-primary mb-4">
+                <h3 className="text-lg font-heading font-semibold text-primary mb-3">
                   {category.title}
                 </h3>
-                <ul className="space-y-2 text-foreground/70">
+                <ul className="space-y-1.5 text-sm text-foreground/70">
                   {category.skills.map((skill, idx) => (
                     <li key={idx}>{skill}</li>
                   ))}
