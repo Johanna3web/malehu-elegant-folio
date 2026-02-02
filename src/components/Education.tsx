@@ -44,8 +44,17 @@ const courseraData = [
 ];
 
 const dataEngineeringData = [
-  { name: "Introduction to Data Engineering", link: "/certificates/coursera-intro-data-engineering.pdf", category: "IBM", description: "An online non-credit course authorized by IBM and offered through Coursera" },
-  { name: "Python Project for Data Engineering", link: "/certificates/coursera-python-data-engineering.pdf", category: "IBM", description: "An online non-credit course authorized by IBM and offered through Coursera" },
+  { name: "Introduction to Data Engineering", link: "/certificates/coursera-intro-data-engineering.pdf", category: "IBM" },
+  { name: "Python Project for Data Engineering", link: "/certificates/coursera-python-data-engineering.pdf", category: "IBM" },
+  { name: "Introduction to Relational Databases (RDBMS)", link: "/certificates/coursera-intro-rdbms.pdf", category: "IBM" },
+  { name: "Databases and SQL for Data Science with Python", link: "/certificates/coursera-databases-sql-python.pdf", category: "IBM" },
+  { name: "Hands-on Introduction to Linux Commands and Shell Scripting", link: "/certificates/coursera-linux-commands.pdf", category: "IBM" },
+  { name: "Relational Database Administration (DBA)", link: "/certificates/coursera-rdbms-admin.pdf", category: "IBM" },
+  { name: "ETL and Data Pipelines with Shell, Airflow and Kafka", link: "/certificates/coursera-etl-pipelines.pdf", category: "IBM" },
+  { name: "Data Warehouse Fundamentals", link: "/certificates/coursera-data-warehouse.pdf", category: "IBM" },
+  { name: "BI Dashboards with IBM Cognos Analytics and Google Looker", link: "/certificates/coursera-bi-dashboards.pdf", category: "IBM" },
+  { name: "Introduction to NoSQL Databases", link: "/certificates/coursera-nosql-databases.pdf", category: "IBM" },
+  { name: "Machine Learning with Apache Spark", link: "/certificates/coursera-ml-spark.pdf", category: "IBM" },
 ];
 
 const businessData = [
@@ -132,7 +141,7 @@ const Education = () => {
             {/* Coursera Data Engineering Certificates */}
             <AccordionItem value="data-engineering" className="border border-border rounded-lg px-6 bg-card shadow-soft">
               <AccordionTrigger className="text-2xl font-heading font-semibold text-primary hover:text-accent">
-                Coursera Data Engineering Certificates ({dataEngineeringData.length})
+                Coursera SFIA Data Engineering Certificates ({dataEngineeringData.length})
               </AccordionTrigger>
               <AccordionContent>
                 <div className="space-y-3 pt-4">
@@ -145,7 +154,6 @@ const Education = () => {
                     >
                       <div className="flex-1">
                         <h4 className="font-heading font-semibold text-primary mb-1">{cert.name}</h4>
-                        <p className="text-sm text-muted-foreground mb-1">{cert.description}</p>
                         <Badge variant="secondary" className="text-xs">{cert.category}</Badge>
                       </div>
                       <ExternalLink className="text-accent ml-4" size={20} />
