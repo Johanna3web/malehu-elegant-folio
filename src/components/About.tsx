@@ -30,9 +30,6 @@ const About = () => {
               I've invested heavily in continuous learning through Coursera, completing multiple certifications in Artificial Intelligence as well as the SFIA-aligned Data Engineering pathway, which strengthened my skills in building, managing, and optimising data systems.
             </p>
             <p>
-              My technical skills include Python, SQL, Data Engineering, Data Analysis, Machine Learning, Data Visualisation, dashboard development, and web technologies like React and JavaScript. I enjoy building efficient data pipelines, creating dashboards that tell meaningful stories, improving business processes, and exploring how AI can enhance decision-making and user experiences.
-            </p>
-            <p>
               Above all, I'm curious, growth-driven, and committed to using data and technology to create practical solutions that make a real impact.
             </p>
           </div>
