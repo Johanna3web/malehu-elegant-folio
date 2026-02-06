@@ -21,13 +21,19 @@ const About = () => {
           {/* Bio Text */}
           <div className="space-y-6 text-lg text-foreground/80 leading-relaxed animate-fade-in-up">
             <p>
-              I am Malehu Johanna Segoapa, a dedicated Data Analyst with a strong background in Business Management and a passion for technology and digital transformation. I hold N4–N6 Business Management qualifications and a Full Stack Development Certificate from the FNB App Academy. I currently work as a Data Analyst and Digital Associate at CAPACITI, where I use data, technology, and innovative thinking to solve business challenges and support digital growth.
+              I'm a dedicated Data Engineering Associate with a strong background in Business Management and a real passion for technology, digital transformation, and solving problems with data. I hold N4–N6 Business Management qualifications and a Full Stack Development Certificate from the FNB App Academy, which helped me build both business insight and technical expertise.
             </p>
             <p>
-              I have completed over 29 professional certifications on Coursera, including 12 focused on Artificial Intelligence. My technical skills include Data Analysis, Python, SQL, Machine Learning, Data Visualisation, Dashboard Development, Web Development, React, and JavaScript.
+              I'm currently working as a Data Engineering Associate at CAPACITI, where I design and support data solutions, work with pipelines, manage datasets, and help turn raw data into reliable, actionable insights for better decision-making. Before this role, I worked as a Digital Associate, where I developed my foundation in data, technology, and digital tools while supporting business and innovation projects.
             </p>
             <p>
-              I enjoy transforming data into meaningful insights, creating visual stories through dashboards, improving business processes, and exploring how AI can enhance decision-making and user experience. I am committed to continuous learning, digital innovation, and delivering solutions that drive business efficiency and organisational impact.
+              I've invested heavily in continuous learning through Coursera, completing multiple certifications in Artificial Intelligence as well as the SFIA-aligned Data Engineering pathway, which strengthened my skills in building, managing, and optimising data systems.
+            </p>
+            <p>
+              My technical skills include Python, SQL, Data Engineering, Data Analysis, Machine Learning, Data Visualisation, dashboard development, and web technologies like React and JavaScript. I enjoy building efficient data pipelines, creating dashboards that tell meaningful stories, improving business processes, and exploring how AI can enhance decision-making and user experiences.
+            </p>
+            <p>
+              Above all, I'm curious, growth-driven, and committed to using data and technology to create practical solutions that make a real impact.
             </p>
           </div>
         </div>
