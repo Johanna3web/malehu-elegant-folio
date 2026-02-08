@@ -77,7 +77,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-24">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-12 text-center animate-fade-in">
+        <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-12 text-center animate-fade-in">
           Projects
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
@@ -90,7 +90,7 @@ const Projects = () => {
 
               {/* Project Content */}
               <div className="p-6 space-y-4">
-                <h3 className="text-2xl font-heading font-semibold text-primary">
+                <h3 className="text-2xl font-heading font-semibold text-primary-foreground">
                   {project.title}
                 </h3>
                 <p className="text-foreground/70 text-sm leading-relaxed">

@@ -82,7 +82,7 @@ const Education = () => {
   return (
     <section id="education" className="py-24">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-12 text-center animate-fade-in">
+        <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-12 text-center animate-fade-in">
           Education & Certifications
         </h2>
         
@@ -100,10 +100,10 @@ const Education = () => {
                 <div className={`p-4 rounded-full ${
                   item.highlight ? "bg-accent/30" : "bg-primary/20"
                 }`}>
-                  <GraduationCap className={item.highlight ? "text-accent" : "text-primary"} size={32} />
+                  <GraduationCap className={item.highlight ? "text-accent" : "text-primary-foreground"} size={32} />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-heading font-semibold text-primary mb-2">
+                  <h3 className="text-2xl font-heading font-semibold text-primary-foreground mb-2">
                     {item.degree}
                   </h3>
                   <p className="text-lg text-secondary mb-2">{item.institution}</p>
@@ -120,7 +120,7 @@ const Education = () => {
           <Accordion type="single" collapsible className="space-y-4">
             {/* Coursera AI Certificates */}
             <AccordionItem value="coursera" className="border border-border rounded-lg px-6 bg-card shadow-soft">
-              <AccordionTrigger className="text-2xl font-heading font-semibold text-primary hover:text-accent">
+              <AccordionTrigger className="text-2xl font-heading font-semibold text-primary-foreground hover:text-accent">
                 Coursera AI Certificates ({courseraData.length})
               </AccordionTrigger>
               <AccordionContent>
@@ -133,7 +133,7 @@ const Education = () => {
                       onClick={() => window.open(cert.link, '_blank')}
                     >
                       <div className="flex-1">
-                        <h4 className="font-heading font-semibold text-primary mb-1">{cert.name}</h4>
+                        <h4 className="font-heading font-semibold text-primary-foreground mb-1">{cert.name}</h4>
                         <Badge variant="secondary" className="text-xs">{cert.category}</Badge>
                       </div>
                       <ExternalLink className="text-accent ml-4" size={20} />
@@ -145,7 +145,7 @@ const Education = () => {
 
             {/* Coursera Data Engineering Certificates */}
             <AccordionItem value="data-engineering" className="border border-border rounded-lg px-6 bg-card shadow-soft">
-              <AccordionTrigger className="text-2xl font-heading font-semibold text-primary hover:text-accent">
+              <AccordionTrigger className="text-2xl font-heading font-semibold text-primary-foreground hover:text-accent">
                 Coursera SFIA Data Engineering Certificates ({dataEngineeringData.length})
               </AccordionTrigger>
               <AccordionContent>
@@ -158,7 +158,7 @@ const Education = () => {
                       onClick={() => window.open(cert.link, '_blank')}
                     >
                       <div className="flex-1">
-                        <h4 className="font-heading font-semibold text-primary mb-1">{cert.name}</h4>
+                        <h4 className="font-heading font-semibold text-primary-foreground mb-1">{cert.name}</h4>
                         <Badge variant="secondary" className="text-xs">{cert.category}</Badge>
                       </div>
                       <ExternalLink className="text-accent ml-4" size={20} />
@@ -169,7 +169,7 @@ const Education = () => {
             </AccordionItem>
 
             <AccordionItem value="business" className="border border-border rounded-lg px-6 bg-card shadow-soft">
-              <AccordionTrigger className="text-2xl font-heading font-semibold text-primary hover:text-accent">
+              <AccordionTrigger className="text-2xl font-heading font-semibold text-primary-foreground hover:text-accent">
                 N4–N6 Business Management Certificates ({businessData.length})
               </AccordionTrigger>
               <AccordionContent>
@@ -196,7 +196,7 @@ const Education = () => {
                       </div>
                       <div className="p-4">
                         <Badge variant="secondary" className="mb-2">{cert.category}</Badge>
-                        <h4 className="font-heading font-semibold text-primary text-sm">{cert.name}</h4>
+                        <h4 className="font-heading font-semibold text-primary-foreground text-sm">{cert.name}</h4>
                       </div>
                     </Card>
                   ))}
@@ -206,7 +206,7 @@ const Education = () => {
 
             {/* FNB Academy Certificate */}
             <AccordionItem value="fnb" className="border border-border rounded-lg px-6 bg-card shadow-soft">
-              <AccordionTrigger className="text-2xl font-heading font-semibold text-primary hover:text-accent">
+              <AccordionTrigger className="text-2xl font-heading font-semibold text-primary-foreground hover:text-accent">
                 Full Stack Development Certificate ({fnbData.length})
               </AccordionTrigger>
               <AccordionContent>
@@ -233,7 +233,7 @@ const Education = () => {
                       </div>
                       <div className="p-4">
                         <Badge variant="secondary" className="mb-2">{cert.category}</Badge>
-                        <h4 className="font-heading font-semibold text-primary text-sm">{cert.name}</h4>
+                        <h4 className="font-heading font-semibold text-primary-foreground text-sm">{cert.name}</h4>
                       </div>
                     </Card>
                   ))}
@@ -243,7 +243,7 @@ const Education = () => {
 
             {/* CAPACITI Certificates */}
             <AccordionItem value="capaciti" className="border border-border rounded-lg px-6 bg-card shadow-soft">
-              <AccordionTrigger className="text-2xl font-heading font-semibold text-primary hover:text-accent">
+              <AccordionTrigger className="text-2xl font-heading font-semibold text-primary-foreground hover:text-accent">
                 CAPACITI Certificates ({capacitiData.length})
               </AccordionTrigger>
               <AccordionContent>
@@ -256,7 +256,7 @@ const Education = () => {
                       onClick={() => window.open(cert.link, '_blank')}
                     >
                       <div className="flex-1">
-                        <h4 className="font-heading font-semibold text-primary mb-1">{cert.name}</h4>
+                        <h4 className="font-heading font-semibold text-primary-foreground mb-1">{cert.name}</h4>
                         <Badge variant="secondary" className="text-xs">{cert.category}</Badge>
                       </div>
                       <ExternalLink className="text-accent ml-4" size={20} />
