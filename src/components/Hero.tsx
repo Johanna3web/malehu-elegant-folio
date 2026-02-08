@@ -10,13 +10,13 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       <div className="absolute inset-0 gradient-warm opacity-5"></div>
       <div className="container mx-auto px-6 relative z-10 text-center animate-fade-in">
-        <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6 text-primary-foreground">
+        <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6 text-foreground">
           Malehu Johanna Segoapa
         </h1>
-        <p className="text-xl md:text-2xl text-accent mb-4 max-w-2xl mx-auto font-medium">
+        <p className="text-xl md:text-2xl text-primary mb-4 max-w-2xl mx-auto font-medium">
           Data Engineering Associate | Business Management Graduate | Lifelong Learner
         </p>
-        <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
           Driven by curiosity and a passion for technology, I combine business insight with digital innovation to create meaningful impact.
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
