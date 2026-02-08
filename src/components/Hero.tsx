@@ -10,7 +10,7 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       <div className="absolute inset-0 gradient-warm opacity-5"></div>
       <div className="container mx-auto px-6 relative z-10 text-center animate-fade-in">
-        <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6 text-primary">
+        <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6 text-primary-foreground">
           Malehu Johanna Segoapa
         </h1>
         <p className="text-xl md:text-2xl text-accent mb-4 max-w-2xl mx-auto font-medium">

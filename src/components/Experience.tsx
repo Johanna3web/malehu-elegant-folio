@@ -22,7 +22,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-12 text-center animate-fade-in">
+        <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-12 text-center animate-fade-in">
           Work Experience
         </h2>
         <div className="max-w-4xl mx-auto space-y-6">
@@ -36,11 +36,11 @@ const Experience = () => {
             >
               <div className="flex items-start gap-6">
                 <div className="bg-primary/10 p-4 rounded-full">
-                  <Briefcase className="text-primary" size={32} />
+                  <Briefcase className="text-primary-foreground" size={32} />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
-                    <h3 className="text-2xl font-heading font-semibold text-primary">
+                    <h3 className="text-2xl font-heading font-semibold text-primary-foreground">
                       {item.role}
                     </h3>
                     {item.current && (

@@ -48,14 +48,14 @@ const Contact = () => {
   return (
     <section id="contact" className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary mb-12 text-center animate-fade-in">
+        <h2 className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-12 text-center animate-fade-in">
           Get In Touch
         </h2>
         
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="animate-fade-in-up">
-            <h3 className="text-2xl font-heading font-semibold text-primary mb-6">
+            <h3 className="text-2xl font-heading font-semibold text-primary-foreground mb-6">
               Send Me a Message
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -105,7 +105,7 @@ const Contact = () => {
           {/* Contact Info & Resume */}
           <div className="space-y-8 animate-fade-in-up">
             <div>
-              <h3 className="text-2xl font-heading font-semibold text-primary mb-6">
+              <h3 className="text-2xl font-heading font-semibold text-primary-foreground mb-6">
                 Connect With Me
               </h3>
               <div className="space-y-4">
@@ -132,7 +132,7 @@ const Contact = () => {
 
             {/* Resume Download */}
             <div>
-              <h3 className="text-2xl font-heading font-semibold text-primary mb-6">
+              <h3 className="text-2xl font-heading font-semibold text-primary-foreground mb-6">
                 Download Résumé
               </h3>
               <Button 
