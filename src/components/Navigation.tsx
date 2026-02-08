@@ -50,8 +50,8 @@ const Navigation = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-primary/95 backdrop-blur-md shadow-soft"
-          : "bg-primary/80 backdrop-blur-sm"
+          ? "bg-card/95 backdrop-blur-md shadow-soft border-b border-border"
+          : "bg-card/80 backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-6 py-4">
@@ -59,7 +59,7 @@ const Navigation = () => {
           {/* Logo */}
           <button
             onClick={() => scrollToSection("home")}
-            className="text-2xl font-heading font-bold text-primary-foreground hover:text-accent transition-smooth"
+            className="text-2xl font-heading font-bold text-foreground hover:text-primary transition-smooth"
           >
             MJS
           </button>
@@ -72,13 +72,13 @@ const Navigation = () => {
                 onClick={() => scrollToSection(link.id)}
                 className={`text-sm font-medium transition-smooth relative ${
                   activeSection === link.id
-                    ? "text-primary-foreground"
-                    : "text-primary-foreground/70 hover:text-primary-foreground"
+                    ? "text-primary"
+                    : "text-foreground/70 hover:text-foreground"
                 }`}
               >
                 {link.label}
                 {activeSection === link.id && (
-                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-accent animate-fade-in"></span>
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-primary animate-fade-in"></span>
                 )}
               </button>
             ))}
