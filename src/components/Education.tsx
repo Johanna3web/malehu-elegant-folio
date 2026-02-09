@@ -54,6 +54,7 @@ const dataEngineeringData = [
   { name: "Data Warehouse Fundamentals", link: "/certificates/coursera-data-warehouse.pdf", category: "IBM" },
   { name: "BI Dashboards with IBM Cognos Analytics and Google Looker", link: "/certificates/coursera-bi-dashboards.pdf", category: "IBM" },
   { name: "Introduction to NoSQL Databases", link: "/certificates/coursera-nosql-databases.pdf", category: "IBM" },
+  { name: "Introduction to Big Data with Spark and Hadoop", link: "/certificates/coursera-intro-big-data-spark-hadoop.pdf", category: "IBM" },
   { name: "Machine Learning with Apache Spark", link: "/certificates/coursera-ml-spark.pdf", category: "IBM" },
   { name: "Data Engineering Capstone Project", link: "/certificates/coursera-data-engineering-capstone.pdf", category: "IBM" },
   { name: "Generative AI: Elevate your Data Engineering", link: "/certificates/coursera-generative-ai-data-engineering.pdf", category: "IBM" },
