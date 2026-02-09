@@ -14,8 +14,8 @@ const skillsData = [
   },
   {
     icon: Brain,
-    title: "Data Science & ML",
-    skills: ["Python (Pandas/NumPy)", "Machine Learning", "Statistical Modeling", "Analysis", "Experimentation (A/B Testing)"]
+    title: "Machine Learning",
+    skills: ["Python (Pandas/NumPy)", "Machine Learning", "Statistical Modeling", "Experimentation (A/B Testing)"]
   },
   {
     icon: Target,
