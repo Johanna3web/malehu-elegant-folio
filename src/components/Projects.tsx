@@ -18,48 +18,6 @@ interface Project {
 const Projects = () => {
   const [projects] = useState<Project[]>([
     {
-      id: "1",
-      title: "AI Generator Hub",
-      description: "AI-powered platform with multiple generators for creative and productivity tasks.",
-      tools: ["React", "TypeScript", "Tailwind CSS", "AI Integration"],
-      links: { live: "https://johanna-segoapa.vercel.app/" },
-    },
-    {
-      id: "2",
-      title: "Resume Builder",
-      description: "Intuitive resume building app for creating professional resumes with ease.",
-      tools: ["React", "TypeScript", "Tailwind CSS"],
-      links: { live: "https://tempo-deployment-d1f34b8f-e90b-4515-ashy.vercel.app/" },
-    },
-    {
-      id: "3",
-      title: "Sentiment AI Dashboard",
-      description: "Analytics dashboard for tracking and visualizing sentiment analysis with real-time insights.",
-      tools: ["React", "TypeScript", "AI/ML", "Data Visualization"],
-      links: { live: "https://sentiment-ai-1682327a.base44.app/" },
-    },
-    {
-      id: "4",
-      title: "AI Chatbot",
-      description: "Interactive conversational AI chatbot with NLP and automated customer engagement.",
-      tools: ["AI/ML", "NLP", "Conversational Design"],
-      links: { live: "https://landbot.online/v3/H-3158721-8RT63U43IP36BDKN/index.html" },
-    },
-    {
-      id: "5",
-      title: "Fresh or Rotten AI Detector",
-      description: "AI-powered prototype detecting fruit/vegetable freshness using image recognition.",
-      tools: ["AI/ML", "Teachable Machine", "Image Recognition", "Figma"],
-      links: { live: "https://www.figma.com/proto/JHN39GavsiQxhZcvp4OgKV/Youth-in-Power-Teachable-Machine?node-id=22-121&t=7uQalgkrmz0ywgOD-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A4&show-proto-sidebar=1" },
-    },
-    {
-      id: "6",
-      title: "EduManage",
-      description: "Smart student management system for grading, attendance, and AI-powered performance analysis.",
-      tools: ["React", "TypeScript", "AI Analytics", "Student Management"],
-      links: { live: "https://emsms.netlify.app/" },
-    },
-    {
       id: "7",
       title: "SA Universities Quantitative Analysis",
       description: "Data analysis project exploring quantitative metrics across South African universities.",
@@ -72,6 +30,48 @@ const Projects = () => {
       description: "A data management system for efficient data storage, retrieval, and organization.",
       tools: ["Python", "SQL", "Data Engineering", "ETL"],
       links: { github: "https://github.com/Johanna3web/data-management-system/tree/main" },
+    },
+    {
+      id: "6",
+      title: "EduManage",
+      description: "Smart student management system for grading, attendance, and AI-powered performance analysis.",
+      tools: ["React", "TypeScript", "AI Analytics", "Student Management"],
+      links: { live: "https://emsms.netlify.app/" },
+    },
+    {
+      id: "2",
+      title: "Resume Builder",
+      description: "Intuitive resume building app for creating professional resumes with ease.",
+      tools: ["React", "TypeScript", "Tailwind CSS"],
+      links: { live: "https://tempo-deployment-d1f34b8f-e90b-4515-ashy.vercel.app/" },
+    },
+    {
+      id: "4",
+      title: "AI Chatbot",
+      description: "Interactive conversational AI chatbot with NLP and automated customer engagement.",
+      tools: ["AI/ML", "NLP", "Conversational Design"],
+      links: { live: "https://landbot.online/v3/H-3158721-8RT63U43IP36BDKN/index.html" },
+    },
+    {
+      id: "1",
+      title: "AI Generator Hub",
+      description: "AI-powered platform with multiple generators for creative and productivity tasks.",
+      tools: ["React", "TypeScript", "Tailwind CSS", "AI Integration"],
+      links: { live: "https://johanna-segoapa.vercel.app/" },
+    },
+    {
+      id: "3",
+      title: "Sentiment AI Dashboard",
+      description: "Analytics dashboard for tracking and visualizing sentiment analysis with real-time insights.",
+      tools: ["React", "TypeScript", "AI/ML", "Data Visualization"],
+      links: { live: "https://sentiment-ai-1682327a.base44.app/" },
+    },
+    {
+      id: "5",
+      title: "Fresh or Rotten AI Detector",
+      description: "AI-powered prototype detecting fruit/vegetable freshness using image recognition.",
+      tools: ["AI/ML", "Teachable Machine", "Image Recognition", "Figma"],
+      links: { live: "https://www.figma.com/proto/JHN39GavsiQxhZcvp4OgKV/Youth-in-Power-Teachable-Machine?node-id=22-121&t=7uQalgkrmz0ywgOD-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A4&show-proto-sidebar=1" },
     },
   ]);
 
