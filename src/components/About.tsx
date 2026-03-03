@@ -21,16 +21,13 @@ const About = () => {
           {/* Bio Text */}
           <div className="space-y-6 text-lg text-foreground/80 leading-relaxed animate-fade-in-up">
             <p>
-              I'm a dedicated Data Engineering Associate with a strong background in Business Management and a real passion for technology, digital transformation, and solving problems with data. I hold N4–N6 Business Management qualifications and a Full Stack Development Certificate from the FNB App Academy, which helped me build both business insight and technical expertise.
+              Data Engineering Associate with a background in Business Management and a passion for technology, digital transformation, and data-driven problem solving. I hold N4–N6 Business Management qualifications and a Full Stack Development Certificate from the FNB App Academy.
             </p>
             <p>
-              I'm currently working as a Data Engineering Associate at CAPACITI, where I design and support data solutions, work with pipelines, manage datasets, and help turn raw data into reliable, actionable insights for better decision-making. Before this role, I worked as a Digital Associate, where I developed my foundation in data, technology, and digital tools while supporting business and innovation projects.
+              I design and support data solutions, manage pipelines and datasets, and turn raw data into actionable insights. I've further strengthened my skills through Coursera certifications in AI and the SFIA-aligned Data Engineering pathway.
             </p>
             <p>
-              I've invested heavily in continuous learning through Coursera, completing multiple certifications in Artificial Intelligence as well as the SFIA-aligned Data Engineering pathway, which strengthened my skills in building, managing, and optimising data systems.
-            </p>
-            <p>
-              Above all, I'm curious, growth-driven, and committed to using data and technology to create practical solutions that make a real impact.
+              I'm curious, growth-driven, and committed to using data and technology to create practical solutions that make a real impact.
             </p>
           </div>
         </div>

@@ -76,6 +76,7 @@ const fnbData = [
 const capacitiData = [
   { name: "AI & Machine Learning Fundamentals", link: "/certificates/ai-ml-fundamentals-capaciti.pdf", category: "CAPACITI" },
   { name: "AI For Everyone", link: "/certificates/ai-for-everyone-capaciti.pdf", category: "CAPACITI" },
+  { name: "Data Engineering Quiz", link: "/certificates/data-engineering-quiz.pdf", category: "CAPACITI" },
 ];
 
 const cloudDevopsData = [
@@ -87,33 +88,32 @@ const Education = () => {
   return (
     <section id="education" className="py-24">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-12 text-center animate-fade-in">
+        <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-14 text-center animate-fade-in">
           Education & Certifications
         </h2>
         
         {/* Formal Education */}
-        <div className="max-w-4xl mx-auto space-y-6 mb-16">
+        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-5 mb-14">
           {educationData.map((item, index) => (
             <Card 
               key={index}
-              className={`p-8 border-border hover-lift bg-card shadow-soft animate-slide-in ${
+              className={`p-6 border-border hover-lift bg-card shadow-soft animate-slide-in ${
                 item.highlight ? "border-accent border-2" : ""
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex items-start gap-6">
-                <div className={`p-4 rounded-full ${
+              <div className="flex items-start gap-4">
+                <div className={`p-3 rounded-full shrink-0 ${
                   item.highlight ? "bg-accent/30" : "bg-primary/20"
                 }`}>
-                  <GraduationCap className={item.highlight ? "text-primary" : "text-foreground"} size={32} />
+                  <GraduationCap className={item.highlight ? "text-primary" : "text-foreground"} size={24} />
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-heading font-semibold text-foreground mb-2">
+                <div>
+                  <h3 className="text-lg font-heading font-semibold text-foreground mb-1">
                     {item.degree}
                   </h3>
-                  <p className="text-lg text-muted-foreground mb-2">{item.institution}</p>
-                  <p className="text-muted-foreground mb-3">{item.year}</p>
-                  <p className="text-foreground/70">{item.description}</p>
+                  <p className="text-sm text-muted-foreground">{item.institution} · {item.year}</p>
+                  <p className="text-xs text-foreground/70 mt-2">{item.description}</p>
                 </div>
               </div>
             </Card>
