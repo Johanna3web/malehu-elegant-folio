@@ -78,6 +78,10 @@ const capacitiData = [
   { name: "AI For Everyone", link: "/certificates/ai-for-everyone-capaciti.pdf", category: "CAPACITI" },
 ];
 
+const cloudDevopsData = [
+  { name: "Cloud & DevOps Certificate", link: "/certificates/cloud-devops-certificate.pdf", category: "Cloud & DevOps" },
+];
+
 const Education = () => {
 
   return (
@@ -250,6 +254,31 @@ const Education = () => {
               <AccordionContent>
                 <div className="space-y-3 pt-4">
                   {capacitiData.map((cert, index) => (
+                    <Card 
+                      key={index}
+                      className="p-4 border-border hover-lift bg-card shadow-soft cursor-pointer animate-fade-in flex items-center justify-between"
+                      style={{ animationDelay: `${index * 0.05}s` }}
+                      onClick={() => window.open(cert.link, '_blank')}
+                    >
+                      <div className="flex-1">
+                        <h4 className="font-heading font-semibold text-foreground mb-1">{cert.name}</h4>
+                        <Badge variant="secondary" className="text-xs">{cert.category}</Badge>
+                      </div>
+                      <ExternalLink className="text-primary ml-4" size={20} />
+                    </Card>
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+
+            {/* Cloud & DevOps Certificate */}
+            <AccordionItem value="cloud-devops" className="border border-border rounded-lg px-6 bg-card shadow-soft">
+              <AccordionTrigger className="text-2xl font-heading font-semibold text-foreground hover:text-primary">
+                Cloud & DevOps Certificate ({cloudDevopsData.length})
+              </AccordionTrigger>
+              <AccordionContent>
+                <div className="space-y-3 pt-4">
+                  {cloudDevopsData.map((cert, index) => (
                     <Card 
                       key={index}
                       className="p-4 border-border hover-lift bg-card shadow-soft cursor-pointer animate-fade-in flex items-center justify-between"
