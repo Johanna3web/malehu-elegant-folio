@@ -1,32 +1,32 @@
 import { Card } from "./ui/card";
-import { Code, Database, Target, Brain, Users, Heart } from "lucide-react";
+import { Code, Database, Target, Brain, Users } from "lucide-react";
 
 const skillsData = [
   {
     icon: Code,
     title: "Frontend Development",
-    skills: ["HTML5, CSS3, JavaScript", "React", "Responsive Design"]
+    skills: ["HTML5 / CSS3 / JavaScript", "React & TypeScript", "Responsive Design"],
   },
   {
     icon: Database,
     title: "Data Engineering",
-    skills: ["SQL & NoSQL", "ETL & Pipelines", "Cloud Platforms (AWS/GCP)", "Big Data (Spark/Kafka)", "Data Warehousing"]
+    skills: ["SQL & NoSQL Databases", "ETL & Data Pipelines", "Cloud (AWS / GCP)", "Big Data (Spark / Kafka)", "Data Warehousing"],
   },
   {
     icon: Brain,
     title: "Machine Learning",
-    skills: ["Python (Pandas/NumPy)", "Machine Learning", "Statistical Modeling", "Experimentation (A/B Testing)"]
+    skills: ["Python (Pandas / NumPy)", "ML & Statistical Modeling", "Experimentation & A/B Testing"],
   },
   {
     icon: Target,
     title: "Data Analytics & BI",
-    skills: ["Data Visualization", "Business Intelligence (BI)", "SQL Querying", "A/B Testing", "Data Storytelling"]
+    skills: ["Data Visualization", "Business Intelligence", "SQL Querying", "Data Storytelling"],
   },
   {
     icon: Users,
     title: "Soft Skills",
-    skills: ["Communication (Verbal, Written, Active Listening)", "Teamwork & Collaboration", "Problem-Solving & Critical Thinking", "Adaptability & Flexibility", "Emotional Intelligence"]
-  }
+    skills: ["Communication & Active Listening", "Teamwork & Collaboration", "Problem-Solving & Critical Thinking", "Adaptability & Emotional Intelligence"],
+  },
 ];
 
 const Skills = () => {
@@ -36,22 +36,22 @@ const Skills = () => {
         <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-12 text-center animate-fade-in">
           Skills
         </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
           {skillsData.map((category, index) => {
             const Icon = category.icon;
             return (
-              <Card 
+              <Card
                 key={index}
-                className="p-4 border-border hover-lift bg-card shadow-soft text-center animate-fade-in-up"
+                className="p-5 border-border hover-lift bg-card shadow-soft text-center animate-fade-in-up flex flex-col items-center"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Icon className="text-primary" size={22} />
+                <div className="bg-primary/10 w-11 h-11 rounded-full flex items-center justify-center mb-3">
+                  <Icon className="text-primary" size={20} />
                 </div>
-                <h3 className="text-lg font-heading font-semibold text-foreground mb-3">
+                <h3 className="text-sm font-heading font-semibold text-foreground mb-2 leading-tight">
                   {category.title}
                 </h3>
-                <ul className="space-y-1.5 text-sm text-foreground/70">
+                <ul className="space-y-1 text-xs text-foreground/70 leading-relaxed">
                   {category.skills.map((skill, idx) => (
                     <li key={idx}>{skill}</li>
                   ))}
