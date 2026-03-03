@@ -1,4 +1,3 @@
-import { Card } from "./ui/card";
 import { Code, Database, Target, Brain, Users } from "lucide-react";
 
 const skillsData = [
@@ -33,30 +32,32 @@ const Skills = () => {
   return (
     <section id="skills" className="py-24">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-12 text-center animate-fade-in">
+        <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-14 text-center animate-fade-in">
           Skills
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
           {skillsData.map((category, index) => {
             const Icon = category.icon;
             return (
-              <Card
+              <div
                 key={index}
-                className="p-5 border-border hover-lift bg-card shadow-soft text-center animate-fade-in-up flex flex-col items-center"
+                className="flex flex-col items-center text-center animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="bg-primary/10 w-11 h-11 rounded-full flex items-center justify-center mb-3">
-                  <Icon className="text-primary" size={20} />
+                <div className="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <Icon className="text-primary" size={22} />
                 </div>
-                <h3 className="text-sm font-heading font-semibold text-foreground mb-2 leading-tight">
+                <h3 className="text-sm font-heading font-semibold text-foreground mb-3">
                   {category.title}
                 </h3>
-                <ul className="space-y-1 text-xs text-foreground/70 leading-relaxed">
+                <ul className="space-y-1.5">
                   {category.skills.map((skill, idx) => (
-                    <li key={idx}>{skill}</li>
+                    <li key={idx} className="text-xs text-foreground/65 leading-snug">
+                      {skill}
+                    </li>
                   ))}
                 </ul>
-              </Card>
+              </div>
             );
           })}
         </div>
